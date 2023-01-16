@@ -1,0 +1,91 @@
+<span
+  class="glyphicon glyphicon-remove"
+  style="color: red; float: right; font-size: 20px"
+  mat-dialog-close
+></span>
+<br />
+
+<div class="example-container">
+  <div class="mb-3">
+    <label
+      for="exampleFormControlInput1"
+      class="form-label"
+      style="font-size: 12px; color: DodgerBlue"
+      >User name</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="usersprofile.userName"
+      name="userName"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter user name"
+    />
+
+    <label
+      for="exampleFormControlInput1"
+      class="form-label"
+      style="font-size: 12px; color: DodgerBlue"
+      >Role</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="usersprofile.role"
+      name="role"
+      class="form-control"
+      id="exampleFormControlInput1"
+      readonly
+      placeholder="{{ role }}"
+    />
+
+    <label
+      for="exampleFormControlInput1"
+      class="form-label"
+      style="font-size: 12px; color: DodgerBlue"
+      >Email</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="usersprofile.email"
+      name="email"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter Email"
+    />
+  </div>
+  <label
+    for="exampleFormControlInput1"
+    class="form-label"
+    style="font-size: 12px; color: DodgerBlue"
+    >Contact No</label
+  >
+  <input
+    type="text"
+    [(ngModel)]="usersprofile.contactNo"
+    name="contactNo"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter contact no"
+  />
+</div>
+<!-- </div> -->
+
+<br />
+
+<button
+  mat-button
+  mat-dialog-close
+  id="no-id"
+  (click)="redirect('false', usersprofile)"
+>
+  No thanks
+</button>
+<button
+  mat-button
+  mat-dialog-close
+  cdkFocusInitial
+  id="yes-id-update-admin"
+  (click)="redirect('true', usersprofile)"
+>
+  Yes please
+</button>

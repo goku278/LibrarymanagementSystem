@@ -1,0 +1,138 @@
+<!-- <p>checkprofile works!</p>
+
+{{ users.email }} -->
+
+<!-- 
+<div class="container">
+  <div class="row" id="row-card-id">
+
+    <div class="card col-md-2" id="material-card-admin-dashboard-id">
+      <span
+        class="glyphicon glyphicon-education"
+        style="font-size: 24px; color: red"
+      ></span>
+      <h5>{{ users.userName }}</h5>
+   
+      <h6>{{ users.role }}</h6>
+    </div>
+
+  </div>
+</div> -->
+
+<!-- {{ uId }}
+<div class="container text-center">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-10">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr class="table-active">
+            <th>{{ role }} Name</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>{{ users.userName }}</td>
+          <td>{{ users.role }}</td>
+          <td>{{ users.email }}</td>
+          <td>{{ users.contactNo }}</td>
+          <td>
+            <span class="glyphicon glyphicon-edit" style="color: blue" (click) = "update()"></span>
+          </td>
+          <td>
+            <span class="glyphicon glyphicon-trash" style="color: red" (click) = "delete()"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container">
+  <div class="row" id="row-card-id">
+    <ng-container>
+      <div class="card col-md-2" id="material-card-admin-dashboard-id">
+        <span
+          class="glyphicon glyphicon-education"
+          style="font-size: 24px; color: red"
+        ></span>
+        Librarians Names
+        <h6>{{ users.userName }}</h6>
+        <h6>{{ users.role }}</h6>
+        <h6>{{ users.email }}</h6>
+        <h6>{{ users.contactNo }}</h6>
+      </div>
+    </ng-container>
+  </div>
+</div> -->
+<img
+  style="width: 25px; height: 25px"
+  src="https://tse1.mm.bing.net/th/id/OIP.DU3kqJmwpKSmWtoJLcwdSAHaHa?pid=ImgDet&rs=1"
+/>
+<span
+  class="glyphicon glyphicon-remove"
+  style="color: maroon; float: right; font-size: 20px"
+  mat-dialog-close
+></span>
+<br />
+<div style="text-align: left">
+  Name : {{ users.userName }}<br />
+  Role : {{ users.role }}<br />
+  Email : {{ users.email }}<br />
+  Contact No : {{ users.contactNo }} <br /><br />
+</div>
+<button type="button" class="btn btn-success" (click)="update()">Update</button>
+<button type="button" class="btn btn-danger" style="float: right">
+  Delete
+</button>
+
+<!-- <mat-card>
+  <mat-card-content>
+    Name : {{ users.userName }}<br />
+    Role : {{ users.role }}<br />
+    Email : {{ users.email }}<br />
+    Contact No : {{ users.contactNo }}
+  </mat-card-content>
+</mat-card> -->
+
+<!-- {{ uId }} -->
+
+<!-- <div class="container text-center">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-10">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr class="table-active">
+            <th>{{ role }} Name</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let au of allusers">
+          <td>{{ au.userName }}</td>
+          <td>{{ au.role }}</td>
+          <td>{{ au.email }}</td>
+          <td>{{ au.contactNo }}</td>
+          <td>
+            <span class="glyphicon glyphicon-edit" style="color: blue" (click) = "update()"></span>
+          </td>
+          <td>
+            <span class="glyphicon glyphicon-trash" style="color: red" (click) = "delete()"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div> -->
+
+<!-- {{ uId }} -->
+
+<!-- style="font-size: 15px; color: red" (click) ="update()" -->

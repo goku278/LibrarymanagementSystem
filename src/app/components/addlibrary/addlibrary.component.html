@@ -1,0 +1,62 @@
+<h2 style="text-align: start; margin-left: 47px">
+  Add Library
+  <span
+    class="glyphicon glyphicon-remove"
+    style="font-size: 25px; color: maroon"
+    id="add-book-delete-1"
+    mat-button
+    mat-dialog-close
+  ></span>
+</h2>
+<div class="row" id="row-id">
+  <div class="col-10">
+    <mat-dialog-content>
+      <form>
+        <div class="mb-3">
+          <label
+            for="exampleInputPassword1"
+            class="form-label"
+            id="libraryName-id"
+            >Library Name</label
+          >
+          <input
+            mat-form
+            type="text"
+            [(ngModel)]="library.libraryName"
+            name="libraryName"
+            class="form-control"
+            id="libraryName-input-id"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" id="adminId-id"
+            >AdminId</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="library.adminId"
+            name="adminId"
+            class="form-control"
+            id="adminId-input-id"
+            aria-describedby="emailHelp"
+          />
+        </div>
+      </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button
+        [mat-dialog-close]
+        type="submit"
+        class="btn btn-primary"
+        id="submit-btn-add-library-id"
+        (click)="addLibrary()"
+      >
+        Submit
+      </button>
+      <button type="reset" class="btn btn-danger" id="reset-btn-add-library-id">
+        Reset
+      </button>
+    </mat-dialog-actions>
+  </div>
+  <div class="col-2"></div>
+</div>

@@ -1,0 +1,66 @@
+<div class="example-container">
+  <div class="mb-3">
+    <label
+      for="exampleFormControlInput1"
+      class="form-label"
+      style="font-size: 12px; color: DodgerBlue"
+      >Admin name</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="updateadminprofile.adminName"
+      name="userName"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter admin name"
+    />
+
+    <label
+      for="exampleFormControlInput1"
+      class="form-label"
+      style="font-size: 12px; color: DodgerBlue"
+      >Email</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="updateadminprofile.email"
+      name="email"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter email"
+    />
+
+    <label
+      for="exampleFormControlInput1"
+      class="form-label"
+      style="font-size: 12px; color: DodgerBlue"
+      >Contact No</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="updateadminprofile.contactNo"
+      name="contactNo"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter contact no"
+    />
+  </div>
+</div>
+
+<button
+  mat-button
+  mat-dialog-close
+  id="no-id"
+  (click)="redirect('false', updateadminprofile)"
+>
+  No thanks
+</button>
+<button
+  mat-button
+  mat-dialog-close
+  cdkFocusInitial
+  id="yes-id-update-admin"
+  (click)="redirect('true', updateadminprofile)"
+>
+  Yes please
+</button>

@@ -1,0 +1,114 @@
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/img/sup2.jpg"  class="d-block w-100" alt="Justice League Comics">
+    </div>
+    <!-- <p>Read</p> -->
+    <div class="carousel-item">
+      <img src="assets/img/naruto.jpg"  class="d-block w-100" alt="Naruto Manga">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/img/conan.jpg" class="d-block w-100" alt="Detective Conan Manga">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container text-center" id="main-content">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10" id="user-widgets">
+      <!-- <ul>
+        <li> -->
+
+      <div
+        class="card"
+        style="width: 18rem"
+        (click)="checkProfile()"
+        id="user-dashboard-card"
+      >
+        <div class="card-body" id="view_books_user">
+          <span
+            class="glyphicon glyphicon-eye-open"
+            style="font-size: 24px; color: red"
+          ></span>
+          <p class="card-text">
+            <a routerlink="/librarydashboard">Check Profile</a>
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        style="width: 18rem"
+        (click)="viewLibraries()"
+        id="user-dashboard-card"
+      >
+        <div class="card-body" id="view_libraries_user">
+          <span
+            class="glyphicon glyphicon-eye-open"
+            style="font-size: 24px; color: red"
+          ></span>
+          <p class="card-text">
+            <a routerlink="/viewalllibraries">View All Libraries</a>
+          </p>
+        </div>
+      </div>
+      <!-- </li>
+        <li> -->
+      <div
+        class="card"
+        style="width: 18rem"
+        (click)="viewBooks()"
+        id="user-dashboard-card"
+      >
+        <div class="card-body" id="view_books_user">
+          <span
+            class="glyphicon glyphicon-eye-open"
+            style="font-size: 24px; color: red"
+          ></span>
+          <p class="card-text">
+            <a routerlink="/librarydashboard">View All Books</a>
+          </p>
+        </div>
+      </div>
+      <!-- </li>
+      </ul> -->
+    </div>
+  </div>
+  <!-- </div> -->
+</div>
+
+<!-- (click)="redirectToLibrary(m.libraryName)" -->
+
+<!-- <div class="col-md-9">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container"> -->
+<!-- <div class="row" id="row-card-id">
+    <ng-container *ngFor="let m of message">
+      <div class="card col-md-2" id="material-card-admin-dashboard-id"
+      (click)="redirectToLibrary(m.libraryName)">
+        <span
+          class="glyphicon glyphicon-education"
+          style="font-size: 24px; color: red"
+        ></span>
+        <h5>{{ m.libraryName }}</h5>
+        Associated Librarians
+        <h6>{{ m.librarianName }}</h6>
+      </div>
+    </ng-container>
+  </div>
+</div> -->

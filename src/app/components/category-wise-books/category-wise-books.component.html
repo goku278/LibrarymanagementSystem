@@ -1,0 +1,88 @@
+<!-- <p>category-wise-books works!</p>
+<p id="category-p">
+  Welcome to the {{ category }} section. Now you get all the {{ category }} at
+  your finger's tip. Browse, read, save for later, resume, now all the activies
+  are possible here at the LMS portal. So continue reading and enjoy theses
+  services offered by LMS!
+</p> -->
+
+<!-- <div class="container text-center">
+  <div class="row" id="row-card-id">
+  
+      <ng-container *ngFor="let b of book">
+        <div class="card col-md-2" id="material-card-admin-dashboard-id">
+          <span
+            class="glyphicon glyphicon-education"
+            style="font-size: 24px; color: red"
+          ></span>
+          <img style="width: 200px" src="{{ b.image }}" />
+          <div style="text-align: center">{{ b.bookTitle }}</div>
+         
+          <div style="text-align: center">Book Type</div>
+         
+          <div style="text-align: center">{{ category }}</div>
+          <br />
+          <div style="text-align: center">Author / Writer</div>
+          <div style="text-align: center">
+            <h6>{{ b.bookAuthor }}</h6>
+          </div>
+          <div style="text-align: center">Contents</div>
+          <div style="text-align: center">
+            <h6>{{ b.synopsis }}</h6>
+          </div>
+      
+        </div>
+      </ng-container>
+    
+  </div>
+</div> -->
+
+<!-- (click)="goToLibraryDashboard(m.libraryName, m.libraryId)" -->
+
+<div class="container">
+  <!-- <h5>Books List</h5> -->
+  <div class="col-md-12">
+    <div class="row" id="row-card-id">
+      <ng-container
+        *ngFor="
+          let b of book
+            | paginate
+              : {
+                  itemsPerPage: tableSize,
+                  currentPage: page,
+                  totalItems: count
+                };
+          let i = index
+        "
+      >
+        <div class="card col-md-2" id="material-card-admin-dashboard-id" (click)="requestIssueBook(b.bookId)">
+          <span
+            class="glyphicon glyphicon-education"
+            style="font-size: 24px; color: red"
+          ></span>
+          <img style="width: 200px" src="{{ b.image }}" />
+          <div style="text-align: center">{{ b.bookTitle }}</div>
+
+          <div style="text-align: center">Book Type</div>
+
+          <div style="text-align: center">{{ category }}</div>
+          <div style="text-align: center">Author / Writer</div>
+          <div style="text-align: center">
+            <h6>{{ b.bookAuthor }}</h6>
+          </div>
+          <div style="text-align: center">Contents</div>
+          <div style="text-align: center">
+            <h6>{{ b.synopsis }}</h6>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div>
+  <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChanged($event)"
+  ></pagination-controls>
+</div>

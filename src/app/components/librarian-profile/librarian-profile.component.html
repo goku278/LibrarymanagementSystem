@@ -1,0 +1,72 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-12"></div>
+  </div>
+</div>
+
+<table
+  mat-table
+  [dataSource]="librarians"
+  class="mt-5"
+  id="mat-table-librarian-profile"
+>
+  <ng-container matColumnDef="Library Name">
+    <th mat-header-cell *matHeaderCellDef>Library Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.libraryName }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Librarian Id">
+    <th mat-header-cell *matHeaderCellDef>Librarian Id</th>
+    <td mat-cell *matCellDef="let element">{{ element.librarianId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Librarian Name">
+    <th mat-header-cell *matHeaderCellDef>Librarian Name</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.librarianName }}
+    </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="Email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Contact No">
+    <th mat-header-cell *matHeaderCellDef>Contact No</th>
+    <td mat-cell *matCellDef="let element">{{ element.contactNo }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Edit">
+    <th mat-header-cell *matHeaderCellDef>Edit</th>
+    <td mat-cell *matCellDef="let element">
+      <span
+        class="glyphicon glyphicon-edit"
+        style="font-size: 15px; color: red"
+      ></span>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Delete">
+    <th mat-header-cell *matHeaderCellDef id="librarian-profile-delete-1">
+      Delete
+    </th>
+    <td
+      mat-cell
+      *matCellDef="let element"
+      (click)="delete(element.librarianId, element, 'Librarian deleted!')"
+    >
+      <span
+        class="glyphicon glyphicon-trash"
+        style="font-size: 15px; color: red"
+        id="librarian-profile-delete"
+      ></span>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<!-- {{ message }} -->

@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Visit Library</h1>
+<div mat-dialog-content>Visit this library?</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-dialog-close
+    id="no-id"
+    (click)="redirect('No thanks')"
+  >
+    No thanks
+  </button>
+  
+      <button
+        mat-button
+        mat-dialog-close
+        cdkFocusInitial
+        id="yes-id"
+        (click)="redirect('Yes please')"
+      >
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="#!"
+          routerLink="/librarydashboard"
+          routerLinkActive="active"
+        >
+        Yes please
+      </a>
+    </li>
+      </button>
+      <!-- Yes please -->
+   
+</div>

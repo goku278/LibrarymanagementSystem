@@ -1,0 +1,61 @@
+<span
+  class="glyphicon glyphicon-remove"
+  style="font-size: 25px; color: red"
+  id="add-book-delete-1"
+  mat-button
+  mat-dialog-close
+></span>
+<h1 mat-dialog-title>Request Book</h1>
+<div mat-dialog-content>
+  <!-- Requets this book/Cancel if previously requested this book -->
+  <div>
+    <label for="exampleInputPassword1" class="form-label" id="book-title-tag-id"
+      >Book Title</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="req.title"
+      name="title"
+      class="form-control"
+      id="book-title-input-id-1"
+    />
+  </div>
+  <div>
+    <label
+      for="exampleInputPassword1"
+      class="form-label"
+      id="book-author-tag-id"
+      >Book Author</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="req.author"
+      name="author"
+      class="form-control"
+      id="book-author-input-id-1"
+    />
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    id="no-id"
+    (click)="raiseRequestOrCancel('false', req)"
+  >
+    Cancel
+  </button>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    id="yes-id"
+    (click)="raiseRequestOrCancel('true', req)"
+  >
+    <!-- (click)="getData('Yes please')" -->
+
+    <!-- (click)="getData('No thanks')" -->
+    Request
+  </button>
+</div>

@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Go to profile</h1>
+<div mat-dialog-content>
+  You can either check your own profile or check every user's profile
+</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-dialog-close
+    id="no-id"
+    (click)="redirect('check_your_profile')"
+  >
+    Check your profile
+  </button>
+
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    id="yes-id"
+    (click)="redirect('check_all_profile')"
+  >
+    Check All Profile
+  </button>
+  <!-- routerLink="/checkprofile"
+        Check all profile -->
+  <!-- Yes please -->
+</div>

@@ -1,0 +1,200 @@
+<h4 style="font-family: Arial; font-weight: bolder;">
+  Add Librarian
+  <span
+    class="glyphicon glyphicon-remove"
+    style="font-size: 25px; color: red;float:right"
+    id="add-book-delete"
+    mat-button
+    mat-dialog-close
+  ></span>
+</h4>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">Library Id</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.libraryId"
+    name="libraryId"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Library Id"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">Admin Id</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.adminId"
+    name="adminId"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Admin Id"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;"
+    >Librarian Name</label
+  >
+  <input
+    type="text"
+    [(ngModel)]="librarian.userName"
+    name="userName"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Librarian Name"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">Email</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.email"
+    name="email"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Email"
+  />
+
+  <br />
+
+  <!-- <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">Role</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.role"
+    name="role"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Role"
+  /> -->
+
+  <label for="exampleFormControlInput1" class="form-label" style="color: #29B6F6;">Role</label>
+          <select
+            class="form-select"
+            style="height: 35px;"
+            aria-label="Default select example"
+            [(ngModel)]="selected"
+            name="selected"
+          >
+            <option selected>Choose Role</option>
+            <option value="LIBRARIAN">LIBRARIAN</option>
+          </select>
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">Qualification</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.qualification"
+    name="qualification"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Qualification"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">Resident</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.resident"
+    name="resident"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Resident"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">Pincode</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.pincode"
+    name="pincode"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Pincode"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">District</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.district"
+    name="district"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter District"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">State</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.state"
+    name="state"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter State"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">House No</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.houseNo"
+    name="houseNo"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter House No"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">Landmark</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.landMark"
+    name="landMark"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Landmark"
+  />
+
+  <br />
+
+  <label for="exampleFormControlInput1" class="form-label" style="color:#29B6F6;">Contact No</label>
+  <input
+    type="text"
+    [(ngModel)]="librarian.contactNo"
+    name="contactNo"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Enter Contact No"
+  />
+
+  <button
+    style="margin-top: 10px; width: 100px"
+    mat-button
+    mat-dialog-close
+    type="submit"
+    class="btn btn-primary mb-3"
+    id="sub-btn-librarian-id"
+    (click)="addLibrarian()"
+  >
+    Add Librarian
+  </button>
+  <button
+    style="margin-top: 10px; width: 100px"
+    type="reset"
+    class="btn btn-danger mb-3"
+    id="reset-btn-librarian-id"
+  >
+    Cancel
+  </button>
+</div>

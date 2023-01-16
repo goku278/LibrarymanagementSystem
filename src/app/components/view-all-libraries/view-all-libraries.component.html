@@ -1,0 +1,52 @@
+<!-- <p>view-all-libraries works!</p> -->
+<div class="container">
+  <div class="row" id="row-card-id">
+    <ng-container *ngFor="let m of message">
+      <div
+        class="card col-md-2"
+        id="material-card-admin-dashboard-id"
+        (click)="goToLibraryDashboard(m.libraryName, m.libraryId)"
+      >
+        <span
+          class="glyphicon glyphicon-education"
+          style="font-size: 24px; color: red"
+        ></span>
+        <h5>{{ m.libraryName }}</h5>
+        <!-- {{ m.libraryId }} -->
+        Associated Librarians
+        <h6>{{ m.librarianName }}</h6>
+        <!-- <button style="background-color: #87CEFA;border: none;">
+            Visit this Library
+        </button> -->
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<!-- {{ userId }} -->
+
+<!-- <div class="container">
+  <div class="row" id="row-card-id">
+    <ng-container *ngFor="let m of message">
+      <div
+        class="card col-md-2"
+        id="material-card-admin-dashboard-id"
+       
+      >
+        <span
+          class="glyphicon glyphicon-education"
+          style="font-size: 24px; color: red"
+        ></span>
+        <h5>{{ m.libraryName }}</h5>
+        Associated Librarians
+        <h6>{{ m.librarianName }}</h6>
+      </div>
+    </ng-container>
+  </div>
+</div> -->
+
+<!-- (click)="redirectToLibrary(m.libraryName)" -->
+
+<!-- <router-outlet></router-outlet> -->
+
+<!-- (click)="redirectToLibrary(m.libraryName)" -->

@@ -1,0 +1,34 @@
+<span
+  class="glyphicon glyphicon-remove"
+  style="font-size: 25px; color: red"
+  id="add-book-delete-1"
+  mat-button
+  mat-dialog-close
+></span>
+<h4 mat-dialog-title>Order New Books</h4>
+<div mat-dialog-content>
+    Order this book?
+</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    id="no-id"
+    (click)="raiseRequestOrCancel('false')"
+  >
+    Cancel
+  </button>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    id="yes-id"
+    (click)="raiseRequestOrCancel('true')"
+  >
+    <!-- (click)="getData('Yes please')" -->
+
+    <!-- (click)="getData('No thanks')" -->
+    Order
+  </button>
+</div>

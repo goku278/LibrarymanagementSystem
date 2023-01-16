@@ -1,0 +1,327 @@
+<!-- <div class="container text-center" id="overall-container">
+  <div class="row">
+    <div class="col-8">
+      <img src="assets/img/add_book_img.png" />
+      <span
+        class="glyphicon glyphicon-remove"
+        style="font-size: 25px; color: red"
+        id="add-book-delete"
+        mat-button
+        mat-dialog-close
+      ></span>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" id="book-title-id"
+            >Book Title</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="addbooks.bookTitle"
+            name="bookTitle"
+            class="form-control"
+            id="book-title-input-id"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" id="book-image-id"
+            >Book Image</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="addbooks.image"
+            name="image"
+            class="form-control"
+            id="book-image-input-id"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" id="isbn-id"
+            >ISBN</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="addbooks.isbn"
+            name="isbn"
+            class="form-control"
+            id="isbn-input-id"
+          />
+        </div>
+        <div class="mb-3">
+          <label
+            for="exampleInputPassword1"
+            class="form-label"
+            id="book-type-id"
+            >Book Type</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="addbooks.bookType"
+            name="bookType"
+            class="form-control"
+            id="booktype-input-id"
+          />
+        </div>
+        <div class="mb-3">
+          <label
+            for="exampleInputPassword1"
+            class="form-label"
+            id="book-author-id"
+            >Book Author</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="addbooks.bookAuthor"
+            name="bookAuthor"
+            class="form-control"
+            id="bookauthor-input-id"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" id="page-no-id"
+            >PageNo</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="addbooks.pageNo"
+            name="pageNo"
+            class="form-control"
+            id="pageno-input-id"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" id="synopsis-id"
+            >Synopsis</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="addbooks.synopsis"
+            name="synopsis"
+            class="form-control"
+            id="synopsis-input-id"
+          />
+        </div>
+        <div class="mb-3">
+          <label
+            for="exampleInputPassword1"
+            class="form-label"
+            id="book-cost-id"
+            >Cost</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="addbooks.price"
+            name="price"
+            class="form-control"
+            id="book-cost-input-id"
+          />
+        </div>
+        <div>
+          <label
+            for="exampleInputPassword1"
+            class="form-label"
+            id="book-cost-id"
+            >LibraryId</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="addbooks.libraryId"
+            name="libraryId"
+            class="form-control"
+            id="book-cost-input-id"
+          />
+        </div>
+        <br />
+        <button
+          type="submit"
+          (click)="addBooks(addbooks)"
+          class="btn btn-primary"
+          mat-button
+          mat-dialog-close
+          id="submit-btn-id"
+        >
+          Submit
+        </button>
+        <button type="reset" class="btn btn-danger" id="reset-btn-id">
+          Reset
+        </button>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>
+
+{{ this.statusmessage.message }} -->
+
+<span
+  class="glyphicon glyphicon-remove"
+  style="font-size: 25px; color: red"
+  id="add-book-delete-1"
+  mat-button
+  mat-dialog-close
+></span>
+<h1 mat-dialog-title>Add Books</h1>
+<div mat-dialog-content>
+  <!-- Requets this book/Cancel if previously requested this book -->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label" id="book-title-id"
+      >Book Title</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="addbooks.bookTitle"
+      name="bookTitle"
+      class="form-control"
+      id="book-title-input-id"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label" id="book-image-id"
+      >Book Image</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="addbooks.image"
+      name="image"
+      class="form-control"
+      id="book-image-input-id"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <!-- <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label" id="isbn-id"
+      >ISBN</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="addbooks.isbn"
+      name="isbn"
+      class="form-control"
+      id="isbn-input-id"
+    />
+  </div> -->
+  <div class="mb-3">
+    <label
+      for="exampleInputPassword1"
+      class="form-label"
+      id="book-type-id"
+      >Book Type</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="addbooks.bookType"
+      name="bookType"
+      class="form-control"
+      id="booktype-input-id"
+    />
+  </div>
+  <div class="mb-3">
+    <label
+      for="exampleInputPassword1"
+      class="form-label"
+      id="book-author-id"
+      >Book Author</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="addbooks.bookAuthor"
+      name="bookAuthor"
+      class="form-control"
+      id="bookauthor-input-id"
+    />
+  </div>
+  <!-- <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label" id="page-no-id"
+      >PageNo</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="addbooks.pageNo"
+      name="pageNo"
+      class="form-control"
+      id="pageno-input-id"
+    />
+  </div> -->
+  <!-- <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label" id="synopsis-id"
+      >Synopsis</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="addbooks.synopsis"
+      name="synopsis"
+      class="form-control"
+      id="synopsis-input-id"
+    />
+  </div> -->
+  <!-- <div class="mb-3">
+    <label
+      for="exampleInputPassword1"
+      class="form-label"
+      id="book-cost-id"
+      >Cost</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="addbooks.price"
+      name="price"
+      class="form-control"
+      id="book-cost-input-id"
+    />
+  </div> -->
+  <div>
+    <label
+      for="exampleInputPassword1"
+      class="form-label"
+      id="book-cost-id"
+      >LibraryId</label
+    >
+    <input
+      type="text"
+      [(ngModel)]="addbooks.libraryId"
+      name="libraryId"
+      class="form-control"
+      id="book-cost-input-id"
+    />
+  </div>
+  <br />
+  <!-- <button
+    type="submit"
+    (click)="addBooks(addbooks)"
+    class="btn btn-primary"
+    mat-button
+    mat-dialog-close
+    id="submit-btn-id"
+  >
+    Submit
+  </button>
+  <button type="reset" class="btn btn-danger" id="reset-btn-id">
+    Reset
+  </button> -->
+</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    id="no-id"
+    
+  >
+    Cancel
+  </button>
+  <button
+    mat-button
+    (click)="addBooks(addbooks)"
+    mat-dialog-close
+    cdkFocusInitial
+    id="yes-id"
+   
+  >
+    <!-- (click)="getData('Yes please')" -->
+
+    <!-- (click)="getData('No thanks')" -->
+    Add Book
+  </button>
+</div>

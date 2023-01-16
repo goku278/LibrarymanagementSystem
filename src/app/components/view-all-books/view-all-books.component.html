@@ -1,0 +1,42 @@
+<h4>Welome to this Library</h4>
+<!-- (click)="redirectToLibrary(m.libraryName)" -->
+<div class="container">
+  <h5>Books List</h5>
+  <div class="row" id="row-card-id">
+    <ng-container
+      *ngFor="
+        let b of books
+          | paginate
+            : {
+                itemsPerPage: tableSize,
+                currentPage: page,
+                totalItems: count
+              };
+        let i = index
+      "
+    >
+      <div
+        class="card col-md-2"
+        id="material-card-admin-dashboard-id"
+        (click)="requestIssueBook(b.bookId)"
+      >
+        <span
+          class="glyphicon glyphicon-education"
+          style="font-size: 24px; color: red"
+        ></span>
+        <img style="width: 200px" src="{{ b.image }}" />
+        <p>Book Title: {{ b.bookTitle }}</p>
+        <h5>Synopsis : {{ b.synopsis }}</h5>
+        <h5>Author : {{ b.bookAuthor }}</h5>
+        <h5>Book Id : {{ b.bookId }}</h5>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div>
+  <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChanged($event)"
+  ></pagination-controls>
+</div>

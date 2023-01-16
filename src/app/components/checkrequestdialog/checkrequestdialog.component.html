@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Request/Cancel</h1>
+<div mat-dialog-content>Either choose requets / cancell</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close cdkFocusInitial id="no-id"
+  (click)="seeRequest('Check Cancel Request')">
+    Check Cancel Request
+  </button>
+  <button mat-button mat-dialog-close cdkFocusInitial id="yes-id"
+  (click)="seeRequest('Check Issue Request')">
+    <!-- (click)="getData('Yes please')" -->
+
+    Check Issue Request
+  </button>
+</div>
+
+<!-- {{ status.message }} -->
+
+<!-- (click)="raiseRequestOrCancel('false')" -->
+<!-- (click)="raiseRequestOrCancel('true')" -->

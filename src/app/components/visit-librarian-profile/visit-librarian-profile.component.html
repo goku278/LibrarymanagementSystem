@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Profile Details</h1>
+<div mat-dialog-content>Visit librarian's profile?</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close id="no-id" (click) = "redirect('false')">
+    No thanks
+  </button>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    id="yes-id"
+    (click) = "redirect('true')"
+   
+  >
+
+  <!-- (click)="getData('Yes please')" -->
+
+  <!-- (click)="getData('No thanks')" -->
+    Yes please
+  </button>
+</div>

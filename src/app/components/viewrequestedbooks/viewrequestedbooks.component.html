@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row" id="row-card-id">
+    <ng-container *ngFor="let b of books">
+      <div class="card col-md-2" id="material-card-admin-dashboard-id" (click)="order(b.bookTitle)">
+        <span
+          class="glyphicon glyphicon-education"
+          style="font-size: 24px; color: red"
+        ></span>
+        <h5 style="color:white">{{ b.bookTitle }}</h5>
+        Book Author
+        <h6 style="color:white">{{ b.bookAuthor }}</h6>
+        <!-- <button style="background-color: #87CEFA;border: none;">
+              Visit this Library
+          </button> -->
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="card col-md-3">
+      <div fxLayout="row">
+        <mat-card *ngFor="let obj of librarians">
+          <br />{{ obj.librarianName }}
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row" id="row-card-id">
+    <ng-container *ngFor="let l1 of l">
+      <div class="card col-md-2" id="material-card-admin-dashboard-id">
+        <span
+          class="glyphicon glyphicon-education"
+          style="font-size: 24px; color: red"
+        ></span>
+        Librarians Names
+        <h6>{{ l1.userName }}</h6>
+        <h6>{{ l1.role }}</h6>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<!-- {{ message }} -->
+
+<!-- (click)="redirectToLibrary(m.libraryName)" -->
+
+<!-- <ul>
+  <li *ngFor="let l of librarians">
+    {{ l.librarianName }}
+  </li>
+</ul> -->
